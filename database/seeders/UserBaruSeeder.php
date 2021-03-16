@@ -13,6 +13,10 @@ class UserBaruSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('users')->insert([
+            'name' => 'administrator',
+            'email' => 'admin.baru@admin.com',
+            'password' => Hash::make('password'),
+        ]);
     }
 }
